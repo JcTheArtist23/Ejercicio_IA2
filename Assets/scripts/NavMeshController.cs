@@ -14,7 +14,7 @@ public class NavMeshController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        target = GameObject.Find("target 1").transform;
+        target = GameObject.Find("player").transform;
         agent = GetComponent<NavMeshAgent>();
     }
 
@@ -42,6 +42,7 @@ public class NavMeshController : MonoBehaviour
             {
                 //aumenta en 1 el index
                 destinationIndex++;
+                Debug.Log("Target Achived");
             }else//si llegamos al maximo de puntos en el array nos devuelve el index al valor 0    
                 {
                     destinationIndex = 0;
